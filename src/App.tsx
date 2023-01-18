@@ -1,26 +1,17 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { useState } from 'react';
 import './App.css';
+import OtpInput from './components/OtpInput';
 
-function App() {
+export default function App() {
+  const [otp, setOtp] = useState("")  // "654321".split("") =>  [6,5,4,3,2,1]
+  const onChange = (value: string, ) => {
+    setOtp(value)
+  }
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="container">
+      <h1>Ract Typescript OTP Input</h1>
+        <OtpInput  value={otp}  valueLength={6} onChange={onChange}  />
     </div>
   );
 }
 
-export default App;

@@ -1,0 +1,6 @@
+ inputMode='numeric' shows the number keyboard and thats what we want
+
+
+search autoComplete attribute https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/autocomplete
+
+pattern='\d{1}' means it should get digit and it should length of one
